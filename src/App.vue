@@ -1,19 +1,28 @@
 <template>
-  <div id="app">
-    <h1>{{ message }}</h1>
-    <p>Count is: {{ counter.count }}</p>
-  </div>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
+import HelloWorld from './components/HelloWorld.vue'
+import Welcome from './components/Welcome.vue'
+
 export default {
-  data() {
-    return {
-      message: 'Hello World!',
-      counter: {
-        count: 0
-      }
-    }
+  name: 'App',
+  components: {
+    HelloWorld,
+    Welcome
   }
 }
 </script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
